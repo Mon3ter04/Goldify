@@ -1,0 +1,72 @@
+[
+    {
+        "businessTime": "2026-08-24T23:57:59.049506Z",
+        "code": "GOLD_18_RLS",
+        "labelEn": "18K Gold / Iranian Rial",
+        "labelFa": "\u0637\u0644\u0627\u06cc \u06f1\u06f8 \u0639\u06cc\u0627\u0631 / \u0631\u06cc\u0627\u0644 \u0627\u06cc\u0631\u0627\u0646",
+        "name": "GOLD_18_RLS",
+        "quoteUnit": "RLS",
+        "slug": "gold_18_rls",
+        "value": 220835337.5
+    },
+    {
+        "businessTime": "2026-08-25T23:58:13.839276Z",
+        "code": "GOLD_18_RLS",
+        "labelEn": "18K Gold / Iranian Rial",
+        "labelFa": "\u0637\u0644\u0627\u06cc \u06f1\u06f8 \u0639\u06cc\u0627\u0631 / \u0631\u06cc\u0627\u0644 \u0627\u06cc\u0631\u0627\u0646",
+        "name": "GOLD_18_RLS",
+        "quoteUnit": "RLS",
+        "slug": "gold_18_rls",
+        "value": 216363225
+    },
+    {
+        "businessTime": "2026-08-26T23:57:57.485039Z",
+        "code": "GOLD_18_RLS",
+        "labelEn": "18K Gold / Iranian Rial",
+        "labelFa": "\u0637\u0644\u0627\u06cc \u06f1\u06f8 \u0639\u06cc\u0627\u0631 / \u0631\u06cc\u0627\u0644 \u0627\u06cc\u0631\u0627\u0646",
+        "name": "GOLD_18_RLS",
+        "quoteUnit": "RLS",
+        "slug": "gold_18_rls",
+        "value": 216389332.5
+    },
+    {
+        "businessTime": "2026-08-27T23:59:38.121176Z",
+        "code": "GOLD_18_RLS",
+        "labelEn": "18K Gold / Iranian Rial",
+        "labelFa": "\u0637\u0644\u0627\u06cc \u06f1\u06f8 \u0639\u06cc\u0627\u0631 / \u0631\u06cc\u0627\u0644 \u0627\u06cc\u0631\u0627\u0646",
+        "name": "GOLD_18_RLS",
+        "quoteUnit": "RLS",
+        "slug": "gold_18_rls",
+        "value": 217202470
+    },
+    {
+        "businessTime": "2026-08-28T23:59:47.140131Z",
+        "code": "GOLD_18_RLS",
+        "labelEn": "18K Gold / Iranian Rial",
+        "labelFa": "\u0637\u0644\u0627\u06cc \u06f1\u06f8 \u0639\u06cc\u0627\u0631 / \u0631\u06cc\u0627\u0644 \u0627\u06cc\u0631\u0627\u0646",
+        "name": "GOLD_18_RLS",
+        "quoteUnit": "RLS",
+        "slug": "gold_18_rls",
+        "value": 216077087.5
+    },
+    {
+        "businessTime": "2026-08-29T23:58:10.122403Z",
+        "code": "GOLD_18_RLS",
+        "labelEn": "18K Gold / Iranian Rial",
+        "labelFa": "\u0637\u0644\u0627\u06cc \u06f1\u06f8 \u0639\u06cc\u0627\u0631 / \u0631\u06cc\u0627\u0644 \u0627\u06cc\u0631\u0627\u0646",
+        "name": "GOLD_18_RLS",
+        "quoteUnit": "RLS",
+        "slug": "gold_18_rls",
+        "value": 218612817.5
+    },
+    {
+        "businessTime": "2026-08-30T23:57:05.479641Z",
+        "code": "GOLD_18_RLS",
+        "labelEn": "18K Gold / Iranian Rial",
+        "labelFa": "\u0637\u0644\u0627\u06cc \u06f1\u06f8 \u0639\u06cc\u0627\u0631 / \u0631\u06cc\u0627\u0644 \u0627\u06cc\u0631\u0627\u0646",
+        "name": "GOLD_18_RLS",
+        "quoteUnit": "RLS",
+        "slug": "gold_18_rls",
+        "value": 217833660
+    }
+]
