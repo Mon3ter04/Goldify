@@ -3,6 +3,7 @@ from os import getenv
 from datetime import datetime
 from typing import Literal
 from dateutil.relativedelta import relativedelta
+import requests
 
 class GoldAPI :
     def __init__(self):
@@ -22,71 +23,67 @@ class GoldAPI :
         elif not api_url :
             raise ValueError("api url not found")
         else :
-            return {"header" : api_key, "url" : api_url}
+            return {"header" : headers, "url" : api_url}
 
     @staticmethod
     def base_request(header,url):
         response = requests.get(
             url=url,
-            header=header
+            headers=header
         )
 
         return response.json()
 
     @staticmethod
-    def get_date(time_frame : Literal["week","month","year"]) :
+    def get_date(time_frame : Literal["week","month"]) :
 
-        today = datetime.datetime.now().date()
+        today = datetime.now().date()
         match time_frame :
             case "week" :
-                return [today,today - relativedelta(weeks=1)]
+                return [today - relativedelta(weeks=1),today]
             case "month" :
-                return [roday,today - relativedelta(months=1)]
-            case "year" :
-                return [today,today - relativedelta(years=1)]
+                return [today - relativedelta(months=1),today]
             case _ :
                 raise ValueError("wrong value")
- 
+    
+    @staticmethod
+    def get_history(start_date,end_data):
+        print()
 
-    def get_day_price(self):
-        self.api_info = self.api_config
-        day_date = base_request()
+    def get_day_price(self): 
+        data= self.base_request(self.api_config["header"],
+        self.api_config["url"])
 
-
-        response = ""
-
-        return response
+        return response_cleaner(data, "day")
 
     def get_week_price(self):
-        start_date = get_date("week")[0]
-        des_date = get_date("week")[1]
-        self.api_info = self.api_config
-        self.week_url = self.api_info[url+f"history?from={start_date}&to={des_date}"]
-        week_data = base_request(self.api_info["header"],self.week_url)
-        return week_data
-        
+        start_date, end_date = get_date("week")
+        url = self.api_config["url"]+f"/history?from={start_date}&to={end_date}"
+        data = self.base_request(self.api_info["header"],url)
 
+        return self.response_cleaner(data,"week")
+       
     def get_month_price(self):
-        start_date = get_date("month")[0]
-        des_date = get_date("month")[1]
-        self.api_info = self.api_config
-        self.month_url = self.api_info[url+f"history?from={start_date}&to={des_date}"]
-        month_data = base_request(self.api_info["header"],self.week_url)
-
-        return month_data
-
-
-
-        response = ""
-
-        return response
+        start_date, end_date = get_date("month")
+        url = self.api_config["url"]+f"/history?from={start_date}&to={end_date}"
+        data = self.base_request(self.api_info["header"],url)
+        return self.response_cleaner(data,"month")
     
-    def response_cleaner(self,response) :
+    def response_cleaner(self,data,data_type : Literal["day","week","month"]) :
+        match data_type :
+            case "day" :
+                clean_day_data = {data["businessTime"][:10] : data["value"]}
+                return clean_day_data
 
-        self.clean_response = ""
+            case "week" :
+                self.clean_week_data = {}
+                for item in data :
+                    self.clean_week_data.update({f"{item["businessTime"][:10]}":item["value"]})
+                return self.clean_week_data
+            case "month" :
+                self.clean_month_data = {}
+                for item in data :
+                    self.clean_month_data.update({f"{item["businessTime"][:10]}":item["value"]})
+                return self.clean_month_data
 
-        return clean_response
-
-
-    
     
