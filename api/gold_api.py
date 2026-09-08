@@ -47,25 +47,6 @@ class GoldAPI :
                 return [today - relativedelta(months=1),today]
             case _ :
                 raise ValueError("wrong value")
-
-    # @staticmethod
-    # def find_covering_file(start_date:date,end_date:date):
-    #     if not DATA_DIR.exists():
-    #         return None
-        
-    #     for folder in DATA_DIR.iterdir() : 
-    #         if not folder.is_dir():
-    #             continue
-
-    #         range_name = folder.name
-    #         saved_start, saved_end = range_name.split("TO")\
-            
-    #         saved_start = date.fromisoformat(saved_start)
-    #         saved_end = date.fromisoformat(saved_end)
-
-    #         if start_date <= saved_start and end_date <= saved_end :
-    #             return folder / f"{folder.name}.json"
-    #     return None
     @staticmethod
     def find_covering_file(start_date: date, end_date: date):
         if not DATA_DIR.exists():
